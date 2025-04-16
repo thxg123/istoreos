@@ -21,8 +21,8 @@
 	compatible = "alark35,3500", "rockchip,rk3568";
 	aliases {
 		ethernet0 = &gmac1;
-		mmc0 = &sdmmc0;
-		mmc1 = &sdhci;
+		mmc0 = &sdhci;
+		mmc1 = &sdmmc0;
 	};
 	//earlycon=uart8250,mmio32,0xfe660000 console=ttyFIQ0
 	/delete-node/ chosen;
