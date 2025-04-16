@@ -1003,5 +1003,3 @@ vccio7-supply = <0x2e>;*/
 &hdmi_sound {
 	simple-audio-card,mclk-fs = <128>;
 };
-
-
