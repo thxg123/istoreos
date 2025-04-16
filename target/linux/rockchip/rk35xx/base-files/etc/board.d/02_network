@@ -129,6 +129,7 @@ rockchip_setup_macs()
 	panther,x2|\
 	dg,nas-lite|\
 	dg,tn3568|\
+	alark35,3500|\
 	linkfog,ala2|\
 	lyt,t68m|\
 	lyt,t88m|\
