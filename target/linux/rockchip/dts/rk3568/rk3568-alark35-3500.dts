@@ -288,17 +288,16 @@
 	cpu-supply = <&vdd_cpu>;
 };
 
-&cpu0_opp_table {
-	
-};
-
 &cpu1 {
+	cpu-supply = <&vdd_cpu>;
 };
 
 &cpu2 {
+	cpu-supply = <&vdd_cpu>;
 };
 
 &cpu3 {
+	cpu-supply = <&vdd_cpu>;
 };
 
 &dfi {
@@ -826,13 +825,15 @@ vccio7-supply = <0x2e>;*/
 	status = "okay";
 	vref-supply = <&vcca_1v8>;
 };
-
+	
 &sdhci {
+	max-frequency = <200000000>;
 	bus-width = <8>;
 	no-sdio;
 	no-sd;
+	supports-emmc;
 	non-removable;
-	max-frequency = <200000000>;
+	mmc-hs200-1_8v;
 	full-pwr-cycle-in-suspend;
 	status = "okay";
 };
