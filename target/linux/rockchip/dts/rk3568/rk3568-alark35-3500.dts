@@ -19,6 +19,7 @@
 / {
 	model = "Rockchip RK3568 RK35-3500 hdmi Board";
 	compatible = "alark35,3500", "rockchip,rk3568";
+
 	aliases {
 		ethernet0 = &gmac1;
 		mmc0 = &sdhci;
@@ -26,7 +27,22 @@
 	};
 	//earlycon=uart8250,mmio32,0xfe660000 console=ttyFIQ0
 	/delete-node/ chosen;
-	
+
+	hdmi_sound: hdmi-sound {
+		compatible = "simple-audio-card";
+		simple-audio-card,format = "i2s";
+		simple-audio-card,mclk-fs = <128>;
+		simple-audio-card,name = "rockchip,hdmi";
+		status = "disabled";
+
+		simple-audio-card,cpu {
+			sound-dai = <&i2s0_8ch>;
+		};
+		simple-audio-card,codec {
+			sound-dai = <&hdmi>;
+		};
+	};
+
 	dc_12v: dc-12v {
 		compatible = "regulator-fixed";
 		regulator-name = "dc_12v";
@@ -1001,5 +1017,5 @@ vccio7-supply = <0x2e>;*/
 	status = "okay";
 };
 &hdmi_sound {
-	simple-audio-card,mclk-fs = <128>;
+	status = "okay";
 };
