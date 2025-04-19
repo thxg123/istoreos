@@ -353,7 +353,7 @@ $(call Device/rk3568)
   DEVICE_MODEL := ALARK35 3500
   DEVICE_DTS := rk3568-alark35-3500
   SUPPORTED_DEVICES += alark35,3500
-  DEVICE_PACKAGES := kmod-nvme kmod-scsi-core kmod-hwmon-pwmfan kmod-thermal kmod-switch-ip17xx
+  DEVICE_PACKAGES := kmod-nvme kmod-scsi-core kmod-hwmon-pwmfan kmod-thermal
 endef
 TARGET_DEVICES += alark35_3500
 
